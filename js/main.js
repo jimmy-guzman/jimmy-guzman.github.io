@@ -31,7 +31,7 @@ function buildProjects(projects) {
   projects.forEach(project => {
     projectsSection.innerHTML += `
     <figure class="col">
-    <img src="images/projects/small/${project.name}.png" alt="Image of ${
+    <img src="images/projects/${project.name}.png" alt="Image of ${
       project.altName
     } Project" class="project-image card">
     <div class="project-overlay">
