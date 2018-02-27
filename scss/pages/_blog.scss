@@ -1,0 +1,44 @@
+/*--------blog-------*/
+
+.warning-text {
+  margin: 5%;
+  padding: 2%;
+}
+
+.blog-list {
+  width: 100%;
+  background: #d7d5d9;
+}
+
+.blog-list ul {
+  @include flex(flex, column-reverse);
+  text-align: left;
+  padding: 5%;
+}
+
+.blog-list li {
+  @include flex(flex, row, space-between);
+}
+
+.blog-list li a {
+  color: #40af93;
+}
+
+.blog-list li a:hover {
+  color: #018185;
+}
+
+.blog-list ul li {
+  padding: 0.5em 2%;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  flex: 1;
+}
+
+.blog-date {
+  font-size: 0.7em;
+}
+
+.blog-icon {
+  margin: auto 0;
+}

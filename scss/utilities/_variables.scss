@@ -1,0 +1,68 @@
+// font stacks
+$font-url--google: 'https://fonts.googleapis.com/css?family=Lato|Oswald:200,300,400,500,700';
+$font-family--primary: "Oswald", sans-serif;
+$font-family--secondary: 'Lato', sans-serif;
+// font weights
+$font-weight--thin: 200;
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--bold: 700;
+//descriptive color variables
+$white: #F8FAFF;
+$black: #000;
+$grey: #818181;
+$bright-grey: #384047;
+$keppel: #40af93;
+$mischka: #d7d5d9;
+$shark: #292b2f;
+$teal: #018185;
+$scooter: #39add1;
+$astral: #3079ab;
+$blush: #c25975;
+$red-violet: #b230a3;
+$skills-colors: (
+  html: $scooter,
+  css: $astral,
+  javascript: $blush,
+  photoshop: $red-violet
+);
+// functional color variables
+$color-primary: $keppel;
+$color-secondary: $teal;
+$color-text-light: $white;
+$color-text-base: $mischka;
+$color-text-dark: $bright-grey;
+$color-link-default: $keppel;
+$color-link-visited: $bright-grey;
+$color-image-border: lighten($grey, 30%);
+$color-body: $shark;
+$color-section-bg: $mischka;
+$color-card: $shark;
+$color-boxshadow: rgba(0, 0, 0, 0.8);
+$color-primary-border: $keppel;
+
+//button colors
+$btn--primary--bg: $keppel;
+$btn--secondary--bg:  $teal;
+$btn--tertiary--bg:  $mischka;
+$btn--primary--color: $mischka;
+$btn--secondary--color:  $white;
+$btn--tertiary--color: $white;
+
+
+// text
+$base__font-size: 16px;
+$base__line: 28px;
+// border radius
+$br--default: 0.3em;
+$br--round: 50%;
+// breakpoints
+$brkpoint--sm: 1px;
+$brkpoint--md: 768px;
+$brkpoint--lg: 1024px;
+// grid
+$g-col-width: 65px;
+$g-gutter-width: 20px;
+$g-col-count: 12;
+$g-cont-max-w: 1400px;

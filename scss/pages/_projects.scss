@@ -1,0 +1,91 @@
+/*----projects----*/
+
+.projects {
+  @include flex(flex, row wrap, space-around, normal);
+  padding-top: 3em;
+}
+
+figure {
+  position: relative;
+  width: 100%;
+  margin: 0 0 2.7em 0;
+  @include flex(flex, column);
+  position: relative;
+  a {
+    color: #40af93;
+  }
+  z-index: 1;
+}
+
+figcaption {
+  position: absolute;
+  @include flex(flex, column, center, center);
+  top: 0;
+  bottom: 5px;
+  align-items: center;
+  padding: 2%;
+  opacity: 0;
+  background-color: rgba(41, 43, 47, 1);
+  transition: all .5s ease-in-out;
+  z-index: 1;
+  width: 100%;
+}
+
+.project-overlay {
+  letter-spacing: em(2px);
+  @include flex(flex, row, space-between, flex-end);
+  position: absolute;
+  bottom: 0;
+  @include mq(medium) {
+    bottom: 0
+  }
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  a {
+    padding: 0 .5em;
+    color: $shark;
+    background: #40af93;
+    font-size: em(19px);
+    font-weight: 300;
+  }
+}
+
+.project-title {
+  letter-spacing: em(2px);
+  z-index: 1;
+  @include flex(flex, row, flex-start);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 .5em;
+  opacity: 1;
+  background-color: $color-primary;
+  color: $shark;
+  h3 {
+    font-weight: $font-weight--light;
+    margin: 0;
+  }
+}
+
+figure:hover .project-overlay {
+  opacity: 1;
+  z-index: 3;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
+
+.col {
+  width: 100%;
+  @include mq(medium) {
+    width: 48%;
+  }
+  @include mq(large) {
+    width: 31%;
+  }
+}
+

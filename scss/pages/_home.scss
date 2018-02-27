@@ -1,0 +1,72 @@
+/*----Intro-----------*/
+
+.about {
+  align-items: center;
+  justify-content: center;
+  @include mq(medium) {
+    @include flex(flex, row);
+  }
+  margin-bottom: 0;
+  a {
+    color: $color-primary;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+.about-info {
+  margin: 1em;
+  padding: 0 1em;
+  @include mq(medium) {
+    width: 60%;
+    order: -1;
+  }
+  @include mq(large) {
+    width: 65%;
+  }
+}
+
+/*----Skills----*/
+
+#skills {
+  align-items: center;
+  margin-bottom: 0;
+  ul {
+    width: 100%;
+    @include flex(flex, column);
+    padding: 0 5%;
+    @include mq(medium) {
+      @include flex(flex, row);
+      margin-left: 1em;
+    }
+    li {
+      padding: 0.5em 0;
+      background: #292b2f;
+      box-shadow: 0px 10px 20px -5px $color-boxshadow;
+      margin-bottom: 1em;
+      flex: 1;
+      @include mq(medium) {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.dropdown {
+  @include flex(flex, column);
+  top: 50px;
+  // position: absolute;
+  width: 100%;
+}
+
+#certs {
+  align-items: center;
+  justify-content: center;
+}
+
+.certs {
+  @include mq(medium) {
+    order: 1;
+  }
+}

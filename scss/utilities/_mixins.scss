@@ -1,0 +1,44 @@
+// media queries
+@mixin mq($break) {
+  @if $break=="small" {
+    @media (min-width: $brkpoint--sm) and (max-width: $brkpoint--md) {
+      @content;
+    }
+  }
+  @else if $break=="medium" {
+    @media (min-width: $brkpoint--md + 1) {
+      @content;
+    }
+  }
+  @else if $break=="large" {
+    @media (min-width: $brkpoint--lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "Sorry, no value could be retrieved for "#{$break}".";
+  }
+}
+
+// flexbox
+@mixin flex($disp: null, $flow: null, $just: null, $items: null, $flex: null) {
+  display: $disp;
+  flex-flow: $flow;
+  justify-content: $just;
+  align-items: $items;
+  flex: $flex;
+}
+
+//button mixins
+@mixin button-setup($type) {
+  @extend %btn;
+  @extend %btn--#{$type};
+
+  &:focus { @extend %btn--#{$type}; }
+  &:hover { @extend %btn--#{$type}--hover; }
+
+  &.disabled {
+    // @extend %disabled;
+    &:hover { @extend %btn--#{$type}; }
+  }
+}

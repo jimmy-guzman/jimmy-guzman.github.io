@@ -1,0 +1,39 @@
+fieldset {
+  margin:  0 auto;
+  border: none;
+  padding: 1em;
+  text-align: left;
+  label {
+    font-size: 1.2em;
+  }
+  input,
+  textarea {
+    background: #fff;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 1em 2%;
+    border: none;
+    border-bottom: 0.3em solid $color-primary-border;
+    resize: none;
+    overflow: hidden;
+    &::placeholder,
+    &::placeholder {
+      padding-right: 2%;
+      color: #018185;
+      font-size: 0.937em;
+      font-style: italic;
+    }
+    &:focus,
+    &:focus {
+      outline: none;
+      border-bottom: 0.3em solid #018185;
+      background-color: #fff;
+    }
+  }
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;;
+}

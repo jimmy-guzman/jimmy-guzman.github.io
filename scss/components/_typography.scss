@@ -1,0 +1,48 @@
+body {
+  font-family: $font-family--primary;
+  color: $color-text-base;
+  line-height: 1.6;
+  font-size: $base__font-size;
+  text-align: center;
+}
+
+a {
+  color: #d7d5d9;
+  text-decoration: none;
+  &:hover {
+    color: #40af93;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h2 {
+  letter-spacing: em(3px);
+  text-transform: uppercase;
+}
+
+.about-info {
+  font-size: em(20px);
+  @include mq(large) {
+    font-size: em(24px);
+  }
+}
+.skills {
+  li {
+    font-size: em(18px);
+    letter-spacing: em(2px);
+  }
+}
+
+figcaption {
+  font-size: em(19px);
+  font-family: $font-family--primary;
+}
+
+.contact-text {
+  font-size: em(22px);
+  font-weight: $font-weight--light;
+}

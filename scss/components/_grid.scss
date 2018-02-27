@@ -1,0 +1,13 @@
+// layout container
+.wrap {
+  width: 100%;
+  margin: em(100px) auto 0;
+  @include flex(flex, column);
+}
+
+
+.main-content {
+  margin-top: em(80px);
+  margin-bottom: em(128px);
+  @include flex(flex, column, center, center);
+}
