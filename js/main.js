@@ -38,7 +38,7 @@ function buildProjects(projects) {
       <a href="https://github.com/jimmy-guzman/${project.name}" target="_blank">
         View Code
       </a>
-      <a href="https://jimmy-guzman.github.io/${
+      <a href="http://jimmyguzman.com/${
         project.name
       }/" target="_blank"> View Demo </a>
     </div>
