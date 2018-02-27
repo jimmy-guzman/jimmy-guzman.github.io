@@ -35,7 +35,7 @@ function buildProjects(projects) {
       project.altName
     } Project" class="project-image card">
     <div class="project-overlay">
-      <a href="https://github.com/jimmy-guzman/${project.name}" target="_blank">
+      <a href="https://github.com/jimmy-guzman/${project.name}" target="_blank" rel="noopener">
         View Code
       </a>
       <a href="http://jimmyguzman.com/${
