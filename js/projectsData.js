@@ -13,7 +13,7 @@ const projectsData = [
   },
   {
     name: "pomodoroclock",
-    altName: "Pomdoro Clock",
+    altName: "Pomodoro Clock",
     description:
       "This Pomodoro Clock was part of freeCodeCamp's advanced front end projects curriculum. It's a web app that acts as minimalist Pomodoro Technique timer with options."
   },
