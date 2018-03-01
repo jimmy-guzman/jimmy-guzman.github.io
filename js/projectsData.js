@@ -89,16 +89,16 @@ const projectsData = [
     description:
       "An interactive, searchable gallery of photos made using HTML, CSS and JavaScript."
   },
-  {
-    name: "registrationform",
-    altName: "Online Registration Form",
-    description:
-      "A responsive, mobile-first registration form using a variety of HTML form elements."
-  },
-  {
-    name: "tributepage",
-    altName: "Tribute Page",
-    description:
-      "A simple responsive tribute page built using HTML, CSS and Bootstrap framework."
-  },
+  // {
+  //   name: "registrationform",
+  //   altName: "Online Registration Form",
+  //   description:
+  //     "A responsive, mobile-first registration form using a variety of HTML form elements."
+  // },
+  // {
+  //   name: "tributepage",
+  //   altName: "Tribute Page",
+  //   description:
+  //     "A simple responsive tribute page built using HTML, CSS and Bootstrap framework."
+  // },
 ];
