@@ -13,7 +13,7 @@ const projectsData = [
   },
   {
     name: "pomodoroclock",
-    altName: "Pomdoro Clock",
+    altName: "Pomodoro Clock",
     description:
       "This Pomodoro Clock was part of freeCodeCamp's advanced front end projects curriculum. It's a web app that acts as minimalist Pomodoro Technique timer with options."
   },
@@ -89,16 +89,16 @@ const projectsData = [
     description:
       "An interactive, searchable gallery of photos made using HTML, CSS and JavaScript."
   },
-  {
-    name: "registrationform",
-    altName: "Online Registration Form",
-    description:
-      "A responsive, mobile-first registration form using a variety of HTML form elements."
-  },
-  {
-    name: "tributepage",
-    altName: "Tribute Page",
-    description:
-      "A simple responsive tribute page built using HTML, CSS and Bootstrap framework."
-  },
+  // {
+  //   name: "registrationform",
+  //   altName: "Online Registration Form",
+  //   description:
+  //     "A responsive, mobile-first registration form using a variety of HTML form elements."
+  // },
+  // {
+  //   name: "tributepage",
+  //   altName: "Tribute Page",
+  //   description:
+  //     "A simple responsive tribute page built using HTML, CSS and Bootstrap framework."
+  // },
 ];
