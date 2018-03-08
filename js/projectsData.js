@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    name: "markdownpreviewer",
+    altName: "Markdown Previewer",
+    description:
+      "The Markdown Previewer was part of freeCodeCamp's React projects curriculum. It's a webapp that incorporates both React and Sass to render a preview of markdown in real time."
+  },
+  {
     name: "simongame",
     altName: "Simon Game",
     description:
