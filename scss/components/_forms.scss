@@ -16,6 +16,8 @@ fieldset {
     border-bottom: 0.3em solid $color-primary-border;
     resize: none;
     overflow: hidden;
+    font-size: 100%; 
+    line-height: 1.15; 
     &::placeholder,
     &::placeholder {
       padding-right: 2%;

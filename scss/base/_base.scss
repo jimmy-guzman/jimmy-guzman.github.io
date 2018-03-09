@@ -4,6 +4,7 @@
 
 body {
   background: $color-body;
+  margin: 0;
 }
 
 .card {
@@ -12,15 +13,9 @@ body {
   @include flex(flex, column, center);
 }
 
-.title {
-  padding: em(3px);
-  display: inline;
-}
-
 .section {
-  padding: em(18px);
+  padding: em(42px) em(18px);
   width: 100%;
   background: $color-section-bg;
-  margin-bottom: em(54px);
   @include flex(flex, column);
 }

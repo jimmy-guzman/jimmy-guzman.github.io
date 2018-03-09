@@ -46,3 +46,9 @@ figcaption {
   font-size: em(22px);
   font-weight: $font-weight--light;
 }
+
+.name {
+  font-size: em(19px);
+  text-decoration: underline;
+  text-decoration-color: $color-primary;
+}

@@ -19,3 +19,15 @@
   background: $btn--secondary--bg;
   color: $btn--secondary--color;
 }
+
+%tag {
+  letter-spacing: em(2px);
+  padding: 0 .5em;
+  color: $shark;
+  background: $color-primary;
+  font-size: em(19px);
+  font-weight: $font-weight--light;
+  &:hover {
+    color: $color-text-base;
+  }
+}

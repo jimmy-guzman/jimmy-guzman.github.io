@@ -3,10 +3,10 @@
 .about {
   align-items: center;
   justify-content: center;
+  margin-bottom: 0;
   @include mq(medium) {
     @include flex(flex, row);
   }
-  margin-bottom: 0;
   a {
     color: $color-primary;
     &:hover {
@@ -15,9 +15,15 @@
   }
 }
 
-.about-info {
+.card-text {
   margin: 1em;
-  padding: 0 1em;
+  padding: 1em;
+  p {
+    margin: 0;
+  }
+}
+
+.about-info {
   @include mq(medium) {
     width: 60%;
     order: -1;
@@ -27,11 +33,16 @@
   }
 }
 
+.certs {
+  @include mq(medium) {
+    order: 1;
+  }
+}
+
 /*----Skills----*/
 
 #skills {
   align-items: center;
-  margin-bottom: 0;
   ul {
     width: 100%;
     @include flex(flex, column);
@@ -50,23 +61,5 @@
         margin-right: 1em;
       }
     }
-  }
-}
-
-.dropdown {
-  @include flex(flex, column);
-  top: 50px;
-  // position: absolute;
-  width: 100%;
-}
-
-#certs {
-  align-items: center;
-  justify-content: center;
-}
-
-.certs {
-  @include mq(medium) {
-    order: 1;
   }
 }

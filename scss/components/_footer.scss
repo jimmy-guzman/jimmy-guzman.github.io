@@ -4,12 +4,3 @@ footer {
   border-top: 0.115em solid $color-primary-border;
 }
 
-.main-footer ul {
-  @include flex(flex, row, center);
-}
-
-.name {
-  font-size: em(19px);
-  border-bottom: 0.115em solid $color-primary-border;
-}
-

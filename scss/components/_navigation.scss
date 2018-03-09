@@ -1,9 +1,9 @@
 // Navigation
 
 header {
-  @include flex(flex, column, center,center);
+  @include flex(flex, column, center, center);
   text-align: center;
-  height: 85vh;
+  height: 90vh;
   a {
     font-size: 8em;
     text-decoration: underline;
@@ -33,30 +33,24 @@ header {
   top: 0;
   width: 100%;
   margin: 0 auto;
-}
-.nav ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  @include flex(flex, row, center, center);
-  li {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    font-size: 1.125em;
-    font-weight: $font-weight--light;
-    letter-spacing: 0.15em;
-    display: block;
-    a {
-      &:hover,
-      &.selected {
-        border-bottom: none;
-        background-color: $color-secondary;
-        border-bottom: 0.115em solid #40af93;
-        background-color: inherit;
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    @include flex(flex, row, center, center);
+    li {
+      flex: 1;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: em(18px);
+      font-weight: $font-weight--light;
+      letter-spacing: em(2px);
+      a {
+        &:hover,
+        &.selected {
+          border-bottom: 0.115em solid #40af93;
+          background-color: inherit;
+        }
       }
     }
   }
@@ -70,10 +64,10 @@ header {
 li.logo {
   max-width: 0;
   overflow: hidden;
-  background: $color-primary;
   transition: all 0.5s;
+  font-size: em(30px);
   font-weight: 600;
-  font-size: 30px;
+  background: $color-primary;
   a {
     color: $shark;
     &:hover {

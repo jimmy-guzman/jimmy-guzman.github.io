@@ -30,29 +30,28 @@ function buildProjects(projects) {
   const projectsSection = document.querySelector(".projects");
   projects.forEach(project => {
     projectsSection.innerHTML += `
-    <figure class="col">
+    <figure class="project">
     <img src="images/projects/small/${project.name}.png" alt="Image of ${
       project.altName
-    } Project" class="project-image card">
-    <div class="project-overlay">
-      <a href="https://github.com/jimmy-guzman/${project.name}" target="_blank" rel="noopener">
+    } Project" class="project__image card">
+    <div class="project__overlay">
+      <a href="https://github.com/jimmy-guzman/${
+        project.name
+      }" target="_blank" rel="noopener">
         View Code
       </a>
       <a href="http://jimmyguzman.com/${
         project.name
       }/" target="_blank"> View Demo </a>
     </div>
-    <div class="project-title">
-      <h3>${project.altName}</h3>
-    </div>
-    <figcaption>
+      <h3 class="project__title">${project.altName}</h3>
+    <figcaption class="project__desc">
       <p>${project.description}</p>
     </figcaption>
   </figure>
     `;
   });
 }
-
 
 function loadPage(url) {
   return fetch(url, {
