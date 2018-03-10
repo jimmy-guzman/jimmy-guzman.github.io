@@ -1,0 +1,39 @@
+header {
+  @include flex(flex, column, center, center);
+  height: 86vh;
+  a {
+    letter-spacing: em(1px);
+    line-height: 1.1;
+    font-size: 6em;
+    text-decoration: underline;
+    text-decoration-color: $color-primary;
+    &:hover {
+      color: $color-primary;
+      text-decoration-color: $mischka;
+    }
+  }
+  a:first-child {
+    font-size: 8em;
+    @include mq(medium) {
+      display: none;
+    }
+  }
+  a + a {
+    display: none;
+    @include mq(medium) {
+      display: inline;
+    }
+  }
+  .caption {
+    line-height: 1.8;
+    letter-spacing: em(1px);
+    width: 100%;
+    opacity: 0.7;
+    @include flex(flex, column);
+    font-size: em(20px);
+    @include mq(medium) {
+      font-size: em(52px);
+      line-height: 1.1;
+    }
+  }
+}

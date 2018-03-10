@@ -28,6 +28,11 @@
       @content;
     }
   }
+  @else if $break=="extra-large" {
+    @media (min-width: $brkpoint--xl) {
+      @content;
+    }
+  }
   @else {
     @error "Sorry, no value could be retrieved for "#{$break}".";
   }

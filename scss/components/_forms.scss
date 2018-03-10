@@ -1,5 +1,4 @@
 fieldset {
-  margin:  0 auto;
   border: none;
   padding: 1em;
   text-align: left;
@@ -8,7 +7,7 @@ fieldset {
   }
   input,
   textarea {
-    background: #fff;
+    background: $white;
     width: 100%;
     margin-bottom: 1em;
     padding: 1em 2%;
@@ -24,6 +23,7 @@ fieldset {
       color: #018185;
       font-size: 0.937em;
       font-style: italic;
+      font-family: $font-family--secondary;
     }
     &:focus,
     &:focus {

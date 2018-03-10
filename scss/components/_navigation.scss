@@ -1,53 +1,11 @@
 // // Navigation
 
-.caption {
-  line-height: 1.8;
-  letter-spacing: em(1px);
-  width: 100%;
-  @include flex(flex, column);
-  font-size: em(20px);
-  @include mq(medium) {
-    font-size: em(52px);
-    line-height: 1.1;
-  }
-}
-
-header {
-  @include flex(flex, column, center, center);
-  text-align: center;
-  height: 86vh;
-  a {
-    letter-spacing: em(1px);
-    line-height: 1.1;
-    font-size: 6em;
-    text-decoration: underline;
-    text-decoration-color: $color-primary;
-    &:hover {
-      color: $color-primary;
-      text-decoration-color: $mischka;
-    }
-  }
-  a:first-child {
-    font-size: 8em;
-    @include mq(medium) {
-      display: none;
-    }
-  }
-  a + a {
-    display: none;
-    @include mq(medium) {
-      display: inline;
-    }
-  }
-}
-
 .nav {
   position: relative;
   background: $shark;
   z-index: 10;
   top: 0;
   width: 100%;
-  margin: 0 auto;
   ul {
     margin: 0;
     list-style: none;
@@ -55,36 +13,33 @@ header {
     @include flex(flex, row, center, center);
     li {
       flex: 1;
-      text-align: center;
       text-transform: capitalize;
       font-size: em(18px);
       font-weight: $font-weight--regular;
-      letter-spacing: em(2px);
+      letter-spacing: $letter-spacing-default;
       a {
         &:hover,
         &.selected {
-          border-bottom: 0.115em solid #40af93;
+          border-bottom: 0.115em solid $color-primary-border;
           background-color: inherit;
         }
       }
     }
   }
+  .fixed-nav & {
+    position: fixed;
+    box-shadow: 0px 10px 20px -5px $color-boxshadow;
+  }
 }
 
-.fixed-nav nav {
-  position: fixed;
-  box-shadow: 0px 10px 20px -5px $color-boxshadow;
-}
 
 li.logo {
   max-width: 0;
   overflow: hidden;
   transition: all 0.5s;
-  font-size: em(30px);
-  font-weight: 600;
   background: $color-primary;
   a {
-    color: $shark;
+    color: $color-text-dark;
     &:hover {
       color: $color-text-base;
     }

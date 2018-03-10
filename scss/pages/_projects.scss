@@ -16,6 +16,9 @@
   @include mq(large) {
     width: 31%;
   }
+  @include mq(extra-large) {
+    width: 24%;
+  }
   @include e(title) {
     position: absolute;
     top: 0;

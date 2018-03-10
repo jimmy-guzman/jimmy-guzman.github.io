@@ -3,7 +3,8 @@
 .about {
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 1444px;
   @include mq(medium) {
     @include flex(flex, row);
   }
@@ -43,7 +44,9 @@
 /*----Skills----*/
 
 #skills {
+  max-width: 1444px;
   align-items: center;
+  margin: 0 auto;
   ul {
     width: 100%;
     @include flex(flex, row wrap, center);

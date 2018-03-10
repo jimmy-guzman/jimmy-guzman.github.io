@@ -30,10 +30,9 @@ $color-primary: $keppel;
 $color-secondary: $teal;
 $color-text-light: $white;
 $color-text-base: $mischka;
-$color-text-dark: $bright-grey;
+$color-text-dark: $shark;
 $color-link-default: $keppel;
 $color-link-visited: $bright-grey;
-$color-image-border: lighten($grey, 30%);
 $color-body: $shark;
 $color-section-bg: $mischka;
 $color-card: $shark;
@@ -52,6 +51,8 @@ $btn--tertiary--color: $white;
 // text
 $base__font-size: 16px;
 $base__line: 28px;
+$letter-spacing-default: 2px;
+$letter-spacing-less: 1px;
 // border radius
 $br--default: 0.3em;
 $br--round: 50%;
@@ -59,6 +60,7 @@ $br--round: 50%;
 $brkpoint--sm: 1px;
 $brkpoint--md: 768px;
 $brkpoint--lg: 1024px;
+$brkpoint--xl: 1440px;
 // grid
 $g-col-width: 65px;
 $g-gutter-width: 20px;
