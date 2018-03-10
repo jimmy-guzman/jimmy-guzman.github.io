@@ -2,6 +2,9 @@
 .wrap {
   width: 100%;
   @include flex(flex, column);
+  margin-top: em(80px);
+  background: $color-section-bg;
+  border-top: 0.115em solid $color-primary-border;
 }
 
 

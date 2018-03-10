@@ -30,6 +30,18 @@ const projectsData = [
       "Javascript Calculator was part of freeCodeCamp's advanced front end projects curriculum. It's a web app that replicates a basic calculator through Javascript."
   },
   {
+    name: "employeedirectorydashboard",
+    altName: "Employee Directory Dashboard",
+    description:
+      "Employee directory that communicates with a third-party API."
+  },
+  {
+    name: "webappdashboard",
+    altName: "Web App Dashboard",
+    description:
+      "Web dashboard complete with JavaScript-driven charts and graphs."
+  },
+  {
     name: "randomquotegenerator",
     altName: "Random Quote Generator",
     description:
@@ -52,18 +64,6 @@ const projectsData = [
     altName: "TwitchTv Viewer",
     description:
       "The TwitchTv viewer uses Twitch's API to fetch your list of twitch streams and show their current status."
-  },
-  {
-    name: "employeedirectorydashboard",
-    altName: "Employee Directory Dashboard",
-    description:
-      "Employee directory that communicates with a third-party API."
-  },
-  {
-    name: "webappdashboard",
-    altName: "Web App Dashboard",
-    description:
-      "Web dashboard complete with JavaScript-driven charts and graphs."
   },
   {
     name: "svganimations",

@@ -1,11 +1,35 @@
-// Navigation
+// // Navigation
+
+// .slide-skills {
+//   margin: 0;
+//   padding: 0;
+//   @include flex(flex, row, space-around);
+//   span {
+//     flex: 1;
+//   }
+//   li {
+//     color: $color-primary;
+//   }
+// }
+
+.caption {
+  line-height: 1.8;
+  width: 100%;
+  @include flex(flex, column);
+  font-size: em(20px);
+  @include mq(medium) {
+    font-size: em(52px);
+    line-height: 1.1;
+  }
+}
 
 header {
   @include flex(flex, column, center, center);
   text-align: center;
   height: 86vh;
   a {
-    font-size: 8em;
+    line-height: 1.1;
+    font-size: 6em;
     text-decoration: underline;
     text-decoration-color: $color-primary;
     &:hover {
@@ -14,6 +38,7 @@ header {
     }
   }
   a:first-child {
+    font-size: 8em;
     @include mq(medium) {
       display: none;
     }

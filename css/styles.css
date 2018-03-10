@@ -70,7 +70,10 @@ figcaption {
 .wrap {
   width: 100%;
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+  margin-top: 5em;
+  background: #d7d5d9;
+  border-top: 0.115em solid #40af93; }
 
 .main-content {
   margin-top: 5em;
@@ -89,6 +92,17 @@ figcaption {
 img {
   width: 100%; }
 
+.caption {
+  line-height: 1.8;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  font-size: 1.25em; }
+  @media (min-width: 769px) {
+    .caption {
+      font-size: 3.25em;
+      line-height: 1.1; } }
+
 header {
   display: flex;
   flex-flow: column;
@@ -97,15 +111,18 @@ header {
   text-align: center;
   height: 86vh; }
   header a {
-    font-size: 8em;
+    line-height: 1.1;
+    font-size: 6em;
     text-decoration: underline;
     text-decoration-color: #40af93; }
     header a:hover {
       color: #40af93;
       text-decoration-color: #d7d5d9; }
-  @media (min-width: 769px) {
-    header a:first-child {
-      display: none; } }
+  header a:first-child {
+    font-size: 8em; }
+    @media (min-width: 769px) {
+      header a:first-child {
+        display: none; } }
   header a + a {
     display: none; }
     @media (min-width: 769px) {
@@ -263,7 +280,8 @@ body {
   #skills ul {
     width: 100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: center;
     padding: 0 5%; }
     @media (min-width: 769px) {
       #skills ul {
@@ -271,11 +289,12 @@ body {
         flex-flow: row;
         margin-left: 1em; } }
     #skills ul li {
+      width: 40%;
       padding: 0.5em 0;
       background: #292b2f;
       box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.8);
       margin-bottom: 1em;
-      flex: 1; }
+      margin-right: 1em; }
       @media (min-width: 769px) {
         #skills ul li {
           margin-right: 1em; } }
@@ -302,10 +321,11 @@ body {
       width: 31%; } }
   .project__title {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
-    margin: 0; }
+    margin: 0;
+    opacity: 1;
+    transition: all  0.5s ease-in-out; }
   .project__desc {
     display: flex;
     flex-flow: column;
@@ -326,7 +346,7 @@ body {
     right: 0;
     width: 100%;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: 1;
     display: flex;
     flex-flow: row;
@@ -336,6 +356,9 @@ body {
     opacity: 1;
     z-index: 3; }
   .project:hover .project__desc {
+    opacity: 1; }
+  .project:hover .project__title {
+    z-index: 2;
     opacity: 1; }
 
 /*----Contact---*/
