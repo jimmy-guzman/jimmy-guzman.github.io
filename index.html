@@ -24,7 +24,7 @@
         <a href="index.html">Jimmy Guzman</a>
       </li>
       <li>
-        <a class=" selected" href="#about">about</a>
+        <a class="selected" href="index.html#about">about</a>
       </li>
       <li>
         <a href="projects.html#projects">projects</a>
@@ -94,13 +94,18 @@
     <ul class="footer-nav">
       <li>Designed &amp; Coded by
         <a href="https://github.com/jimmy-guzman" class="name" target="_blank" rel="noopener">Jimmy Guzman
-          <i class="fab fa-github"></i>
         </a>
       </li>
     </ul>
   </footer>
-
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script>
+    (function() {
+        const link = document.createElement('link');
+        link.rel = "stylesheet"; 
+        link.href = "https://fonts.googleapis.com/css?family=Lato|Oswald:400,700";
+        document.querySelector("head").appendChild(link);
+    })();
+    </script>
   <script src="js/main.js"></script>
 
 </body>

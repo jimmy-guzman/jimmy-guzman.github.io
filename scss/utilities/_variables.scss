@@ -1,12 +1,10 @@
 // font stacks
-$font-url--google: 'https://fonts.googleapis.com/css?family=Lato|Oswald:200,300,400,500,700';
-$font-family--primary: "Oswald", sans-serif;
-$font-family--secondary: 'Lato', sans-serif;
+// $font-url--google: 'https://fonts.googleapis.com/css?family=Lato|Oswald:400,700';
+$font-family--primary: "Oswald", Impact, "Franklin Gothic Bold", sans-serif;
+$font-family--secondary: "Lato", "Trebuchet MS", sans-serif;
+
 // font weights
-$font-weight--thin: 200;
-$font-weight--light: 300;
 $font-weight--regular: 400;
-$font-weight--medium: 500;
 $font-weight--bold: 700;
 //descriptive color variables
 $white: #F8FAFF;

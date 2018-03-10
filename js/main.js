@@ -1,6 +1,5 @@
 const nav = document.querySelector(".nav");
 const topOfNav = nav.offsetTop;
-const headerText = document.querySelectorAll("header a");
 
 function fixNav() {
   if (window.scrollY >= topOfNav) {
@@ -37,14 +36,11 @@ function buildProjects(projects) {
   </figure>
     `;
   });
+
 }
 
-function loadPage(url) {
-  return fetch(url, {
-    method: "GET"
-  }).then(function(response) {
-    return response.text();
-  });
+if (location.href.includes("projects")) {
+  buildProjects(projectsData);
 }
 
 window.addEventListener("scroll", fixNav);

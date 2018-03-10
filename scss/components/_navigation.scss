@@ -1,19 +1,8 @@
 // // Navigation
 
-// .slide-skills {
-//   margin: 0;
-//   padding: 0;
-//   @include flex(flex, row, space-around);
-//   span {
-//     flex: 1;
-//   }
-//   li {
-//     color: $color-primary;
-//   }
-// }
-
 .caption {
   line-height: 1.8;
+  letter-spacing: em(1px);
   width: 100%;
   @include flex(flex, column);
   font-size: em(20px);
@@ -28,6 +17,7 @@ header {
   text-align: center;
   height: 86vh;
   a {
+    letter-spacing: em(1px);
     line-height: 1.1;
     font-size: 6em;
     text-decoration: underline;
@@ -68,7 +58,7 @@ header {
       text-align: center;
       text-transform: capitalize;
       font-size: em(18px);
-      font-weight: $font-weight--light;
+      font-weight: $font-weight--regular;
       letter-spacing: em(2px);
       a {
         &:hover,
