@@ -40,6 +40,7 @@ function buildProjects(projects) {
 }
 
 if (location.href.includes("projects")) {
+  console.log("load");
   buildProjects(projectsData);
 }
 
