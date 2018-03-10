@@ -12,20 +12,6 @@ function fixNav() {
   }
 }
 
-let i = 0;
-
-function typeWriter() {
-  const txt = "Jimmy Guzman";
-  const speed = 60;
-  if (i < txt.length) {
-    headerText[1].innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-typeWriter();
-
 function buildProjects(projects) {
   const projectsSection = document.querySelector(".projects");
   projects.forEach(project => {
