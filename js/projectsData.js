@@ -108,3 +108,36 @@ const projectsData = [
   //     "A simple responsive tribute page built using HTML, CSS and Bootstrap framework."
   // },
 ];
+
+// function buildProjects(projects) {
+//   const projectsSection = document.querySelector(".projects");
+//   projects.forEach(project => {
+//     projectsSection.innerHTML += `
+//     <figure class="project">
+//     <img src="images/projects/small/${project.name}.png" alt="Image of ${
+//       project.altName
+//     } Project" class="project__image card">
+//     <div class="project__overlay">
+//       <a href="https://github.com/jimmy-guzman/${
+//         project.name
+//       }" target="_blank" rel="noopener">
+//         View Code
+//       </a>
+//       <a href="http://jimmyguzman.com/${
+//         project.name
+//       }/" target="_blank"> View Demo </a>
+//     </div>
+//       <h3 class="project__title">${project.altName}</h3>
+//     <figcaption class="project__desc">
+//       <p>${project.description}</p>
+//     </figcaption>
+//   </figure>
+//     `;
+//   });
+
+// }
+
+// if (location.href.includes("projects")) {
+//   console.log("load");
+//   buildProjects(projectsData);
+// }
