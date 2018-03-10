@@ -257,6 +257,7 @@ body {
       color: #018185; }
 
 .card-text {
+  letter-spacing: 0.01875em;
   margin: 1em;
   padding: 1em; }
   .card-text p {
