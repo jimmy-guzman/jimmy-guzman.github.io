@@ -1,5 +1,8 @@
 // // Navigation
-
+.selected {
+  text-decoration: underline; 
+  text-decoration-color:  $color-primary-border;
+}
 .nav {
   position: relative;
   background: $shark;
