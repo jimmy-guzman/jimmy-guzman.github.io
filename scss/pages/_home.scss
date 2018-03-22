@@ -1,37 +1,16 @@
-/*----Intro-----------*/
-
-.about {
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1444px;
-  @include mq(medium) {
-    @include flex(flex, row);
-  }
-  a {
-    color: $color-primary;
-    &:hover {
-      color: $color-secondary;
-    }
-  }
-}
-
 .card-text {
-  letter-spacing: em(.3px);
+  letter-spacing: em(0.3px);
   margin: 1em;
   padding: 1em;
   p {
     margin: 0;
   }
-}
-
-.about-info {
   @include mq(medium) {
-    width: 60%;
+    width: 50%;
     order: -1;
   }
   @include mq(large) {
-    width: 65%;
+    width: 55%;
   }
 }
 
@@ -43,13 +22,15 @@
 
 /*----Skills----*/
 
-#skills {
-  max-width: 1444px;
+.skills {
+  order: 3;
+
+  width: 100%;
   align-items: center;
-  margin: 0 auto;
+  margin: 8em auto 0;
   ul {
     width: 100%;
-    @include flex(flex, row wrap, center);
+    @include flex(flex, row wrap, center, center);
     padding: 0 5%;
     @include mq(medium) {
       @include flex(flex, row);

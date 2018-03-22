@@ -2,6 +2,11 @@
 
 .projects {
   @include flex(flex, row wrap, space-around, normal);
+  margin-bottom: 2em;
+  @include e(buttons) {
+    width: 100%;
+    @include flex(flex, row, space-around);
+  }
 }
 
 .project {
@@ -9,16 +14,8 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  margin: 0 0 2.7em 0;
-  @include mq(medium) {
-    width: 48%;
-  }
-  @include mq(large) {
-    width: 31%;
-  }
-  @include mq(extra-large) {
-    width: 24%;
-  }
+  margin: 0 0 1.3em 0;
+
   @include e(title) {
     position: absolute;
     top: 0;
@@ -26,7 +23,7 @@
     margin: 0;
     opacity: 1;
     @extend %tag;
-    transition: all  0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   @include e(desc) {
     @include flex(flex, column, center, center);

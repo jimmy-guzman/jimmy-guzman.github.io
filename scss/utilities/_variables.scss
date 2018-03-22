@@ -7,7 +7,7 @@ $font-family--secondary: "Lato", "Trebuchet MS", sans-serif;
 $font-weight--regular: 400;
 $font-weight--bold: 700;
 //descriptive color variables
-$white: #F8FAFF;
+$white: #f8faff;
 $black: #000;
 $grey: #818181;
 $bright-grey: #384047;
@@ -38,16 +38,13 @@ $color-section-bg: $mischka;
 $color-card: $shark;
 $color-boxshadow: rgba(0, 0, 0, 0.8);
 $color-primary-border: $keppel;
-
-//button colors
+// button colors
 $btn--primary--bg: $keppel;
-$btn--secondary--bg:  $teal;
-$btn--tertiary--bg:  $mischka;
+$btn--secondary--bg: $teal;
+$btn--tertiary--bg: $shark;
 $btn--primary--color: $mischka;
-$btn--secondary--color:  $white;
+$btn--secondary--color: $white;
 $btn--tertiary--color: $white;
-
-
 // text
 $base__font-size: 16px;
 $base__line: 28px;

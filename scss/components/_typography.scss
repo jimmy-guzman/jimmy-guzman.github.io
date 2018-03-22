@@ -24,11 +24,8 @@ h2 {
   text-transform: uppercase;
 }
 
-.about-info {
+.card-text {
   font-size: em(20px);
-  @include mq(large) {
-    font-size: em(24px);
-  }
 }
 .skills {
   li {

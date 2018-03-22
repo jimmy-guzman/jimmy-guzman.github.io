@@ -1,5 +1,13 @@
 .btn--primary {
-  @include button-setup("primary"); 
+  @include button-setup("primary");
+  font-size: em(24px);
+  &:focus {
+    border: none;
+  }
+}
+
+.btn--secondary {
+  @include button-setup("secondary");
   font-size: em(24px);
   &:focus {
     border: none;

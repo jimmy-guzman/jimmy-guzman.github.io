@@ -1,7 +1,6 @@
 // // Navigation
 .selected {
-  text-decoration: underline; 
-  text-decoration-color:  $color-primary-border;
+  text-decoration: underline $color-primary;
 }
 .nav {
   position: relative;
@@ -17,15 +16,11 @@
     li {
       flex: 1;
       text-transform: capitalize;
-      font-size: em(18px);
+      font-size: em(22px);
       font-weight: $font-weight--regular;
       letter-spacing: $letter-spacing-default;
-      a {
-        &:hover,
-        &.selected {
-          border-bottom: 0.115em solid $color-primary-border;
-          background-color: inherit;
-        }
+      &:hover {
+        text-decoration: underline $color-primary;
       }
     }
   }
@@ -34,7 +29,6 @@
     box-shadow: 0px 10px 20px -5px $color-boxshadow;
   }
 }
-
 
 li.logo {
   max-width: 0;

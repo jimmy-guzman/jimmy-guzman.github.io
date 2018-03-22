@@ -32,8 +32,7 @@ const projectsData = [
   {
     name: "employeedirectorydashboard",
     altName: "Employee Directory Dashboard",
-    description:
-      "Employee directory that communicates with a third-party API."
+    description: "Employee directory that communicates with a third-party API."
   },
   {
     name: "webappdashboard",
@@ -94,7 +93,7 @@ const projectsData = [
     altName: "Interactive Photo Gallery",
     description:
       "An interactive, searchable gallery of photos made using HTML, CSS and JavaScript."
-  },
+  }
   // {
   //   name: "registrationform",
   //   altName: "Online Registration Form",

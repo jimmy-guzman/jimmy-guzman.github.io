@@ -12,10 +12,3 @@ body {
   background: $color-card;
   @include flex(flex, column, center);
 }
-
-.section {
-  padding: em(42px) em(18px);
-  width: 100%;
-  background: $color-section-bg;
-  @include flex(flex, column);
-}
