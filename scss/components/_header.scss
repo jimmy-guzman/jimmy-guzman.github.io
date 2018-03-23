@@ -1,6 +1,9 @@
 header {
   @include flex(flex, column, center, center);
-  height: calc(100vh - 70px);
+  height: calc(100vh - 144px);
+  @include mq(small) {
+    height: calc(100vh - 70px);
+  }
   a {
     letter-spacing: em(1px);
     line-height: 1.1;

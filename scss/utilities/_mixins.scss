@@ -14,7 +14,7 @@
 // media queries
 @mixin mq($break) {
   @if $break=="small" {
-    @media (min-width: $brkpoint--sm) and (max-width: $brkpoint--md) {
+    @media (min-width: $brkpoint--sm) {
       @content;
     }
   }
