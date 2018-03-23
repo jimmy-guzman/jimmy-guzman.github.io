@@ -10,5 +10,5 @@ body {
 .card {
   box-shadow: 0px 10px 20px -5px $color-boxshadow;
   background: $color-card;
-  @include flex(flex, column, center);
+  @include flex(flex, row, space-around);
 }

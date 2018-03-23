@@ -80,7 +80,7 @@ const projectsData = [
     name: "interactivevideoplayer",
     altName: "Interactive Video Player",
     description:
-      "The Interactive Video Player was developed using JavaScript and the HTML5 Video API. The player synchronizes the video and the transcript. In addition, when a user clicks on a transcript line it takes them to the appropriate part in the video."
+      "The Interactive Video Player was developed using JavaScript and the HTML5 Video API. The player synchronizes the video and the transcript."
   },
   {
     name: "webstyleguide",
@@ -115,13 +115,11 @@ let projectIndex = 0;
 
 // fix nav on scroll after it's passed
 function fixNav() {
-  if (window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight;
-    document.body.classList.add("fixed-nav");
-  } else {
-    document.body.style.paddingTop = 0;
-    document.body.classList.remove("fixed-nav");
-  }
+  window.scrollY >= topOfNav
+    ? ((document.body.style.paddingTop = nav.offsetHeight),
+      document.body.classList.add("fixed-nav"))
+    : ((document.body.style.paddingTop = 0),
+      document.body.classList.remove("fixed-nav"));
 }
 
 // smooth scroll to section based on dataset.href
@@ -140,49 +138,38 @@ function setActiveNavLink() {
   const navLink = document.querySelectorAll(".nav__link");
 
   sections.forEach((section, index) => {
-    if (section.offsetTop <= window.scrollY) {
-      navLink.forEach(link => {
-        link.classList.remove("selected");
-      });
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+      navLink.forEach(link => link.classList.remove("selected"));
+      navLink[navLink.length - 1].classList.add("selected");
+    } else if (section.offsetTop <= window.scrollY) {
+      navLink.forEach(link => link.classList.remove("selected"));
       navLink[index].classList.add("selected");
     } else if (window.scrollY === 0) {
-      navLink.forEach(link => {
-        link.classList.remove("selected");
-      });
+      navLink.forEach(link => link.classList.remove("selected"));
     }
   });
 }
 
 const projectsSection = document.querySelector(".projects");
 
-
-
 function buildProjects(projects) {
-
-  projectsData.forEach(project => {
+  projectsData.forEach(({ name, altName, description }) => {
     projectsSection.innerHTML += `
     <figure class="project">
-    <img src="images/projects/small/${project.name}.png" alt="Image of ${
-      project.altName
-    } Project" class="project__image card">
+    <img src="images/projects/small/${name}.png" alt="Image of ${altName} Project" class="project__image card">
     <div class="project__overlay">
-      <a href="https://github.com/jimmy-guzman/${
-        project.name
-      }" target="_blank" rel="noopener">
+      <a href="https://github.com/jimmy-guzman/${name}" target="_blank" rel="noopener">
         View Code
       </a>
-      <a href="http://jimmyguzman.com/${
-        project.name
-      }/" target="_blank"> View Demo </a>
+      <a href="http://jimmyguzman.com/${name}/" target="_blank"> View Demo </a>
     </div>
-      <h3 class="project__title">${project.altName}</h3>
+      <h3 class="project__title">${altName}</h3>
     <figcaption class="project__desc">
-      <p>${project.description}</p>
+      <p>${description}</p>
     </figcaption>
   </figure>
     `;
   });
-
 }
 buildProjects(projects);
 // event listeners
