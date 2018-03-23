@@ -16,7 +16,10 @@
     li {
       flex: 1;
       text-transform: capitalize;
-      font-size: em(22px);
+      font-size: em(18px);
+      @include mq(medium) {
+        font-size: em(22px);
+      }
       font-weight: $font-weight--regular;
       letter-spacing: $letter-spacing-default;
       

@@ -178,7 +178,21 @@ function buildProjects(projects) {
   });
 }
 buildProjects(projects);
+
+// set header height dynamically
+function setHeaderHeight() {
+  const header = document.querySelector(".main-header");
+  let vH = window.innerHeight - nav.offsetHeight;
+  header.style.height = `${vH}px`;
+}
+setHeaderHeight();
+
 // event listeners
 document.addEventListener("click", smoothScroll);
 window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", setActiveNavLink);
+window.addEventListener("resize",setHeaderHeight);
+
+
+
+
