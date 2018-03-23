@@ -115,13 +115,16 @@ const projectsData = [
   // },
 ];
 
+const header = document.querySelector(".main-header");
 const nav = document.querySelector(".nav");
-const topOfNav = nav.offsetTop;
+setHeaderHeight();
+const topOfNav = header.offsetHeight;
 
 // fix nav on scroll after it's passed
 function fixNav() {
+  console.log(window.scrollY);
   window.scrollY >= topOfNav
-    ? ((document.body.style.paddingTop = nav.offsetHeight),
+    ? ((document.body.style.paddingTop = header.offsetHeight),
       document.body.classList.add("fixed-nav"))
     : ((document.body.style.paddingTop = 0),
       document.body.classList.remove("fixed-nav"));
@@ -181,11 +184,11 @@ buildProjects(projects);
 
 // set header height dynamically
 function setHeaderHeight() {
-  const header = document.querySelector(".main-header");
+
   let vH = window.innerHeight - nav.offsetHeight;
   header.style.height = `${vH}px`;
 }
-setHeaderHeight();
+
 
 // event listeners
 document.addEventListener("click", smoothScroll);
