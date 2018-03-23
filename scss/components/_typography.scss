@@ -26,6 +26,9 @@ h2 {
 
 .card-text {
   font-size: em(20px);
+  @include mq(large) {
+    font-size: em(24px);
+  }
 }
 .skills {
   li {

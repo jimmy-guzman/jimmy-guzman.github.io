@@ -155,12 +155,16 @@ function setActiveNavLink() {
 
 const projectsSection = document.querySelector(".projects");
 
-function renderProject(project) {
-  projectsSection.innerHTML = `
+
+
+function buildProjects(projects) {
+
+  projectsData.forEach(project => {
+    projectsSection.innerHTML += `
     <figure class="project">
     <img src="images/projects/small/${project.name}.png" alt="Image of ${
-    project.altName
-  } Project" class="project__image card">
+      project.altName
+    } Project" class="project__image card">
     <div class="project__overlay">
       <a href="https://github.com/jimmy-guzman/${
         project.name
@@ -176,31 +180,12 @@ function renderProject(project) {
       <p>${project.description}</p>
     </figcaption>
   </figure>
-  <div class="projects__buttons card">
-  <button class="btn--secondary" data-render="previous">Previous</button>
-  <button class="btn--secondary" data-render="next">Next</button>
-  </div>
     `;
+  });
+
 }
-renderProject(projectsData[projectIndex]);
-
-function cycleProjects(e) {
-  if (e.target.dataset.render === "next") {
-    projectIndex === projectsData.length - 1
-      ? (projectIndex = 0)
-      : projectIndex++;
-  }
-
-  if (e.target.dataset.render === "previous") {
-    projectIndex === 0
-      ? (projectIndex = projectsData.length - 1)
-      : projectIndex--;
-  }
-  renderProject(projectsData[projectIndex]);
-}
-
+buildProjects(projects);
 // event listeners
 document.addEventListener("click", smoothScroll);
 window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", setActiveNavLink);
-projectsSection.addEventListener("click", cycleProjects);
