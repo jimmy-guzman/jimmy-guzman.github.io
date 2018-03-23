@@ -2,36 +2,24 @@
   letter-spacing: em(0.3px);
   margin: 1em;
   padding: 1em;
-  p {
-    margin: 0;
-  }
   @include mq(medium) {
     width: 50%;
-    order: -1;
   }
   @include mq(large) {
     width: 55%;
   }
 }
 
-.certs {
-  @include mq(medium) {
-    order: 1;
-  }
-}
 
 /*----Skills----*/
 
 .skills {
-  order: 3;
-
   width: 100%;
-  align-items: center;
+  @include flex(flex, row wrap, center, center);
   margin: 8em auto 0;
   ul {
     width: 100%;
     @include flex(flex, row wrap, center, center);
-    padding: 0 5%;
     @include mq(medium) {
       @include flex(flex, row);
       margin-left: 1em;

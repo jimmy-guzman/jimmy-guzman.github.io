@@ -11,13 +11,20 @@
 .section {
   width: 100%;
   background: $color-section-bg;
-  @include flex(flex, row wrap, center, center);
+  @include flex(flex, row wrap, space-around, center);
   padding-top: 8em;
   margin-bottom: 5em;
   max-width: 1444px;
   margin: 0 auto;
 }
 
-// .contact {
-//   @include flex(flex, column);
-// }
+.contact {
+  @include flex(flex, column);
+  @include mq(medium) {
+    @include flex(flex, row);
+  }
+  @include e(icons) {
+    margin-top: 1em;
+    @include flex(flex, row, space-around);
+  }
+}

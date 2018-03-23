@@ -5,11 +5,3 @@
     border: none;
   }
 }
-
-.btn--secondary {
-  @include button-setup("secondary");
-  font-size: em(24px);
-  &:focus {
-    border: none;
-  }
-}

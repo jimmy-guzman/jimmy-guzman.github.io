@@ -176,3 +176,4 @@ buildProjects(projects);
 document.addEventListener("click", smoothScroll);
 window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", setActiveNavLink);
+
