@@ -7,10 +7,10 @@ body {
 }
 
 a {
-  color: #d7d5d9;
+  color: $color-primary;
   text-decoration: none;
   &:hover {
-    color: #40af93;
+    color: $color-secondary;
   }
 }
 
@@ -49,6 +49,4 @@ figcaption {
 
 .name {
   font-size: em(19px);
-  text-decoration: underline;
-  text-decoration-color: $color-primary;
 }

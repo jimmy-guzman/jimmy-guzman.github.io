@@ -3,7 +3,6 @@
 .skills {
   width: 100%;
   @include flex(flex, row wrap, center, center);
-  margin: 8em auto 0;
   ul {
     width: 100%;
     @include flex(flex, row wrap, center, center);
@@ -18,7 +17,6 @@
       box-shadow: 0px 10px 20px -5px $color-boxshadow;
       margin-bottom: 1em;
       margin-right: 1em;
-      // flex: 1;
       @include mq(medium) {
         margin-right: 1em;
       }

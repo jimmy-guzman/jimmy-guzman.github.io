@@ -118,8 +118,6 @@ const projectsData = [
 const nav = document.querySelector(".nav");
 const topOfNav = nav.offsetTop;
 
-let projectIndex = 0;
-
 // fix nav on scroll after it's passed
 function fixNav() {
   window.scrollY >= topOfNav
@@ -157,9 +155,9 @@ function setActiveNavLink() {
   });
 }
 
-const projectsSection = document.querySelector(".projects");
-
 function buildProjects(projects) {
+  const projectsSection = document.querySelector(".projects");
+
   projectsData.forEach(({ name, altName, description, demoLink }) => {
     let demo = demoLink || `http://jimmyguzman.com/${name}`;
     projectsSection.innerHTML += `

@@ -1,6 +1,7 @@
 /*----projects----*/
 
 .projects {
+  padding-top: 3em;
   @include flex(flex, row wrap, space-around, normal);
 }
 .project {
