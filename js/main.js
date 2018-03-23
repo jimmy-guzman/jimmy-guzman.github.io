@@ -6,6 +6,13 @@ const projectsData = [
       "The Markdown Previewer was part of freeCodeCamp's React projects curriculum. It's a webapp that incorporates both React and Sass to render markdown in real time."
   },
   {
+    name: "reactflickrgallery",
+    altName: "React Flickr Gallery",
+    description:
+      "The React Flickr Gallery is an image gallery gallery made in react that pulls images from the Flickr API based on the user's search .",
+    demoLink: "https://reactflickrgallery.jimmyguzman.com/"
+  },
+  {
     name: "simongame",
     altName: "Simon Game",
     description:
@@ -153,7 +160,8 @@ function setActiveNavLink() {
 const projectsSection = document.querySelector(".projects");
 
 function buildProjects(projects) {
-  projectsData.forEach(({ name, altName, description }) => {
+  projectsData.forEach(({ name, altName, description, demoLink }) => {
+    let demo = demoLink || `http://jimmyguzman.com/${name}`;
     projectsSection.innerHTML += `
     <figure class="project">
     <img src="images/projects/small/${name}.png" alt="Image of ${altName} Project" class="project__image card">
@@ -161,7 +169,7 @@ function buildProjects(projects) {
       <a href="https://github.com/jimmy-guzman/${name}" target="_blank" rel="noopener">
         View Code
       </a>
-      <a href="http://jimmyguzman.com/${name}/" target="_blank"> View Demo </a>
+      <a href="${demo}" target="_blank"> View Demo </a>
     </div>
       <h3 class="project__title">${altName}</h3>
     <figcaption class="project__desc">
@@ -176,4 +184,3 @@ buildProjects(projects);
 document.addEventListener("click", smoothScroll);
 window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", setActiveNavLink);
-
