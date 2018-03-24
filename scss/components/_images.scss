@@ -2,7 +2,7 @@
   border: 1em solid $shark;
   box-shadow: 0px 10px 20px -5px $color-boxshadow;
   max-width: 300px;
-  margin: 1em;
+  margin-bottom: 1em;
 }
 
 .card__image--large {
@@ -16,6 +16,7 @@ img {
 svg {
   fill: $color-primary;
 }
+
 a svg:hover {
   fill: $color-secondary;
 }
