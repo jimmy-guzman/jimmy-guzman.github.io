@@ -12,4 +12,3 @@ function fixNav() {
 }
 
 window.addEventListener("scroll", fixNav);
-
