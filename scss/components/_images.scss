@@ -1,6 +1,12 @@
 .card__image {
   border: 1em solid $shark;
   box-shadow: 0px 10px 20px -5px $color-boxshadow;
+  max-width: 300px;
+  margin: 1em;
+}
+
+.card__image--large {
+  max-width: 375px;
 }
 
 img {

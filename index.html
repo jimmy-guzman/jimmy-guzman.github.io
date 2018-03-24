@@ -55,34 +55,39 @@
     <div class="wrap">
 
       <div id="about" class="section">
-        <div>
-          <img class="card__image" src="images/headshot.png" alt="">
-        </div>
-
-        <div class="card card-text">
-          <p>I'm currently based out of Madison but I love traveling and experiencing new places, so i'll go where the job takes
-            me. I'm well versed in various front-end skills and have a passion for building great user experiences with great functionality, which is
-            demonstrated in my
-            <a href="#projects">projects</a>. </p>
-        </div>
 
 
-        <div class="card card-text">
-          <P>
-            My path to becoming a Front End Developer consisted mainly of online open education, which I believe is a great resource.
-            The first being
-            <a href="https://www.freecodecamp.org/jimmy-guzman" target="_blank" rel="noopener">freeCodeCamp</a>, in which I developed numerous
-            <a href="#projects">projects</a> that strengthen and solidified my skills in Javascript, HTML, and CSS. In addition to freeCodeCamp,
-            I worked through
-            <a href="https://teamtreehouse.com/jimmyguzman" target="_blank" rel="noopener">Team Treehouse</a> Techdegree's projects and CS50x coursework.
-          </P>
+        <div class="grid__row">
+          <div class="grid__col--4">
+            <img class="card__image" src="images/headshot.png" alt="">
+          </div>
+          <div class="card card-text grid__col--8">
+            <p>I'm currently based out of Madison but I love traveling and experiencing new places, so i'll go where the job
+              takes me. I'm well versed in various front-end skills and have a passion for building great user experiences
+              with great functionality, which is demonstrated in my
+              <a href="#projects">projects</a>. </p>
+          </div>
         </div>
 
-        <div>
-          <a href="images/fcccertBig.png" target="new">
-            <img class="card__image" src="images/fcccert.png" alt="image of fcc certificate">
-          </a>
+        <div class="grid__row">
+          <div class="card card-text grid__col--8">
+            <P>
+              My path to becoming a Front End Developer consisted mainly of online open education, which I believe is a great resource.
+              The first being
+              <a href="https://www.freecodecamp.org/jimmy-guzman" target="_blank" rel="noopener">freeCodeCamp</a>, in which I developed numerous
+              <a href="#projects">projects</a> that strengthen and solidified my skills in Javascript, HTML, and CSS. In addition to freeCodeCamp,
+              I worked through
+              <a href="https://teamtreehouse.com/jimmyguzman" target="_blank" rel="noopener">Team Treehouse</a> Techdegree's projects and CS50x coursework.
+            </P>
+          </div>
+
+          <div class="grid__col--4">
+            <a href="images/fcccertBig.png" target="new">
+              <img class="card__image card__image--large" src="images/fcccert.png" alt="image of fcc certificate">
+            </a>
+          </div>
         </div>
+
 
         <div id="skills" class="skills">
           <ul>
@@ -100,67 +105,75 @@
         </div>
       </div>
 
-      <div class="section">
-        <div class="projects " id="projects">
+      <div class="section" id="projects">
+        <div class="projects grid__row">
 
         </div>
       </div>
 
+      <div id="contact" class="section">
 
-      <div id="contact" class="contact section">
 
-        <div class="card card-text">
-          <p>
-            If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
-          </p>
-          <p>
-            Feel free to click on the icons or fill out the form.
-          </p>
-          <div class="contact__icons">
-            <a href="mailto:hello@jimmyguzman.com">
-              <svg width="50" height="25">
-                <use href="#mail" />
-              </svg>
-            </a>
-            <a href="https://github.com/jimmy-guzman" target="_blank" rel="noopener">
-              <svg width="50" height="25">
-                <use href="#github" />
-              </svg>
-            </a>
-            <a href="https://teamtreehouse.com/jimmyguzman" target="_blank" rel="noopener">
-              <svg width="50" height="25">
-                <use href="#treehouse" />
-              </svg>
-            </a>
-            <a href="https://www.freecodecamp.org/jimmy-guzman" target="_blank" rel="noopener">
-              <svg width="50" height="25">
-                <use href="#freecodecamp" />
-              </svg>
-            </a>
+
+        <div class="grid__row">
+          <div class="card card-text grid__col--6">
+            <p>
+              If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
+            </p>
+            <div class="grid__row">
+              <a href="mailto:hello@jimmyguzman.com">
+                <svg width="50" height="25">
+                  <title>link to open email</title>
+                  <use href="#mail" />
+                </svg>
+              </a>
+              <a href="https://github.com/jimmy-guzman" target="_blank" rel="noopener">
+                <svg width="50" height="25">
+                  <title>link to github</title>
+                  <use href="#github" />
+                </svg>
+              </a>
+              <a href="https://teamtreehouse.com/jimmyguzman" target="_blank" rel="noopener">
+                <svg width="50" height="25">
+                  <title>link to treehouse</title>
+                  <use href="#treehouse" />
+                </svg>
+              </a>
+              <a href="https://www.freecodecamp.org/jimmy-guzman" target="_blank" rel="noopener">
+                <svg width="50" height="25">
+                  <title>link to freecodecamp</title>
+                  <use href="#freecodecamp" />
+                </svg>
+              </a>
+            </div>
+            <p>
+              hello@jimmyguzman.com
+            </p>
           </div>
+          <form action="https://formspree.io/jimmy.guzman@outlook.com" method="POST" class="grid__col--6">
 
+            <fieldset class="card">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" id="name" placeholder="John Doe" required>
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" placeholder="example@domain.com" title="Enter your email address">
+
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="5" placeholder="Tell me more..."></textarea>
+
+              <input class="btn--primary" type="submit" value="Send">
+
+              <input type="hidden" name="_next" value="//jimmyguzman.com/#contact" />
+
+            </fieldset>
+
+          </form>
         </div>
 
 
-        <form action="https://formspree.io/jimmy.guzman@outlook.com" method="POST">
 
-          <fieldset class="card">
-            <label for="name">Your Name</label>
-            <input type="text" name="name" id="name" placeholder="John Doe" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" placeholder="example@domain.com" title="Enter your email address">
-
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="5" placeholder="Tell me more..."></textarea>
-
-            <input class="btn--primary" type="submit" value="Send">
-
-            <input type="hidden" name="_next" value="//jimmyguzman.com/#contact" />
-
-          </fieldset>
-
-        </form>
       </div>
 
     </div>

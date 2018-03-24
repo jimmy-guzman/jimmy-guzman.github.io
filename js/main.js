@@ -118,11 +118,11 @@ const projectsData = [
 const header = document.querySelector(".main-header");
 const nav = document.querySelector(".nav");
 setHeaderHeight();
-const topOfNav = header.offsetHeight;
+buildProjects(projects);
 
 // fix nav on scroll after it's passed
 function fixNav() {
-  console.log(window.scrollY);
+  const topOfNav = header.offsetHeight;
   window.scrollY >= topOfNav
     ? ((document.body.style.paddingTop = header.offsetHeight),
       document.body.classList.add("fixed-nav"))
@@ -132,10 +132,11 @@ function fixNav() {
 
 // smooth scroll to section based on dataset.href
 function smoothScroll(e) {
-  if (e.target.className === "nav__link") {
+  if (e.target.classList.contains("nav__link")) {
     document.querySelector(e.target.dataset.href).scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
+      inline: "start"
     });
   }
 }
@@ -149,7 +150,7 @@ function setActiveNavLink() {
     if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
       navLink.forEach(link => link.classList.remove("selected"));
       navLink[navLink.length - 1].classList.add("selected");
-    } else if (section.offsetTop <= window.scrollY) {
+    } else if (section.offsetTop - nav.offsetHeight <= window.scrollY) {
       navLink.forEach(link => link.classList.remove("selected"));
       navLink[index].classList.add("selected");
     } else if (window.scrollY === 0) {
@@ -164,38 +165,31 @@ function buildProjects(projects) {
   projectsData.forEach(({ name, altName, description, demoLink }) => {
     let demo = demoLink || `http://jimmyguzman.com/${name}`;
     projectsSection.innerHTML += `
-    <figure class="project">
+    <div class="project grid__col--6 grid__col--4-lg">
     <img src="images/projects/small/${name}.png" alt="Image of ${altName} Project" class="project__image card">
     <div class="project__overlay">
       <a href="https://github.com/jimmy-guzman/${name}" target="_blank" rel="noopener">
         View Code
       </a>
-      <a href="${demo}" target="_blank"> View Demo </a>
+      <a href="${demo}" target="_blank" rel="noopener"> View Demo </a>
     </div>
       <h3 class="project__title">${altName}</h3>
-    <figcaption class="project__desc">
+    <div class="project__desc">
       <p>${description}</p>
-    </figcaption>
-  </figure>
+    </div>
+  </div>
     `;
   });
 }
-buildProjects(projects);
 
 // set header height dynamically
 function setHeaderHeight() {
-
   let vH = window.innerHeight - nav.offsetHeight;
   header.style.height = `${vH}px`;
 }
-
 
 // event listeners
 document.addEventListener("click", smoothScroll);
 window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", setActiveNavLink);
-window.addEventListener("resize",setHeaderHeight);
-
-
-
-
+window.addEventListener("resize", setHeaderHeight);

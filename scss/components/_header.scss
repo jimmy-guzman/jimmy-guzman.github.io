@@ -7,7 +7,6 @@ header {
     font-size: 4em;
     @include mq(medium) {
       font-size: 8em;
-  
     }
     &:hover {
       color: $color-secondary;    }
@@ -15,9 +14,7 @@ header {
   .caption {
     line-height: 1.8;
     letter-spacing: em(1px);
-    width: 100%;
     opacity: 0.9;
-    @include flex(flex, column);
     font-size: em(32px);
     @include mq(medium) {
       font-size: em(72px);

@@ -1,22 +1,13 @@
 /*----projects----*/
 
-.projects {
-  padding-top: 3em;
-  @include flex(flex, row wrap, space-around, normal);
-}
+// .projects {
+//   // padding-top: 3em;
+// }
 .project {
-  @include mq(medium) {
-    width: 48%;
-  }
-  @include mq(large) {
-    width: 31%;
-  }
-
   @include flex(flex, column);
-  width: 90%;
   position: relative;
   z-index: 1;
-  margin: 0 0 1.3em 0;
+  margin-bottom: 1em;
 
   @include e(title) {
     position: absolute;
@@ -32,7 +23,7 @@
     position: absolute;
     z-index: 1;
     top: 0;
-    bottom: 5px;
+    bottom: 1em;
     padding: em(9px);
     opacity: 0;
     background: rgba(41, 43, 47, 1);
@@ -41,7 +32,7 @@
   }
   @include e(overlay) {
     position: absolute;
-    bottom: 0;
+    bottom: 1em;
     right: 0;
     width: 100%;
     opacity: 0;

@@ -3,7 +3,7 @@
 .wrap {
   width: 100%;
   @include flex(flex, column);
-  padding-bottom: em(120px);
+  // padding-bottom: em(120px);
   background: $color-section-bg;
   border-top: 0.115em solid $color-primary-border;
 }
@@ -12,19 +12,27 @@
   width: 100%;
   background: $color-section-bg;
   @include flex(flex, row wrap, space-around, center);
-  padding-top: 8em;
-  margin-bottom: 5em;
+  padding-top: em(64px);
   max-width: 1444px;
-  margin: 0 auto;
+  margin: em(54px) auto;
 }
 
-.contact {
-  @include flex(flex, column);
-  @include mq(medium) {
-    @include flex(flex, row);
+.grid {
+  @include e(row) {
+    @include flex(flex, row wrap, space-around, center);
+    margin: 1em auto 0;
+    width: 90%;
+    @include mq(medium) {
+      width: 100%;
+    }
   }
-  @include e(icons) {
-    margin-top: 1em;
-    @include flex(flex, row, space-around);
+  @include e(col) {
+    width: 90%;
+    @include mq(medium) {
+      @include g-columns(medium);
+    }
+    @include mq(large) {
+      @include g-columns(large);
+    }
   }
 }
