@@ -136,7 +136,25 @@ const projectsData = [
 
 // }
 
-// if (location.href.includes("projects")) {
-//   console.log("load");
-//   buildProjects(projectsData);
+// function buildProjects(projects) {
+//   const projectsSection = document.querySelector(".projects");
+
+//   projectsData.forEach(({ name, altName, description, demoLink }) => {
+//     let demo = demoLink || `http://jimmyguzman.com/${name}`;
+//     projectsSection.innerHTML += `
+//     <div class="project grid__col--6 grid__col--4-lg">
+//     <img src="images/projects/small/${name}.png" alt="Image of ${altName} Project" class="project__image card">
+//     <div class="project__overlay">
+//       <a href="https://github.com/jimmy-guzman/${name}" target="_blank" rel="noopener">
+//         View Code
+//       </a>
+//       <a href="${demo}" target="_blank" rel="noopener"> View Demo </a>
+//     </div>
+//       <h3 class="project__title">${altName}</h3>
+//     <div class="project__desc">
+//       <p>${description}</p>
+//     </div>
+//   </div>
+//     `;
+//   });
 // }
