@@ -15,6 +15,7 @@ img {
 
 svg {
   fill: $color-primary;
+  transition: all 0.3s ease-in-out;
 }
 
 a svg:hover {

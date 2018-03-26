@@ -17,18 +17,18 @@
       flex: 1;
       text-transform: capitalize;
       font-size: em(18px);
+      font-weight: $font-weight--regular;
+      letter-spacing: $letter-spacing-default;
+      transition: all 0.3s ease-in-out;
       @include mq(medium) {
         font-size: em(22px);
       }
-      font-weight: $font-weight--regular;
-      letter-spacing: $letter-spacing-default;
-      
     }
     li:not(:first-child) {
       &:hover {
         text-decoration: underline $color-primary;
       }
-  }
+    }
   }
   .fixed-nav & {
     position: fixed;

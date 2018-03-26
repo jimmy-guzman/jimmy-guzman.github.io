@@ -9,6 +9,7 @@ body {
 a {
   color: $color-primary;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
   &:hover {
     color: $color-secondary;
   }
@@ -36,7 +37,7 @@ h2 {
     letter-spacing: em(2px);
   }
 }
-.project__desc{
+.project__desc {
   font-size: em(19px);
   font-family: $font-family--primary;
 }
