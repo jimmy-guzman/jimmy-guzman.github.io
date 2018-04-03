@@ -1,4 +1,5 @@
-import style from "./scss/index.scss";
+require("./scss/index.scss");
+
 (function() {
   const link = document.createElement("link");
   link.rel = "stylesheet";
